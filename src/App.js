@@ -26,7 +26,7 @@ function App() {
     const button = e.currentTarget;
     const currentUnit = button.innerText.slice(1);
     const isCelsius = currentUnit === "c";
-    button.innerText = isCelsius ? "`\u00B0`F" : "`\u00B0`C";
+    button.innerText = isCelsius ? `${`\u00B0`}F` : `${`\u00B0`}C`;
     setUnits(isCelsius ? "metirc" : "imperial");
   };
 
