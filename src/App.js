@@ -20,7 +20,6 @@ function App() {
       } else setBg(hotBg);
     };
     fetchWeatherData();
-    console.log(weather);
   }, [units, city]);
 
   const handleUnitsClick = (e) => {
