@@ -20,14 +20,15 @@ function App() {
       } else setBg(hotBg);
     };
     fetchWeatherData();
+    console.log(weather);
   }, [units, city]);
 
   const handleUnitsClick = (e) => {
     const button = e.currentTarget;
     const currentUnit = button.innerText.slice(1);
-    const isCelsius = currentUnit === "c";
+    const isCelsius = currentUnit === "C";
     button.innerText = isCelsius ? `${`\u00B0`}F` : `${`\u00B0`}C`;
-    setUnits(isCelsius ? "metirc" : "imperial");
+    setUnits(isCelsius ? "metric" : "imperial");
   };
 
   const enterKeyPressed = (e) => {
